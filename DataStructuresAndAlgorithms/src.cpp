@@ -9,6 +9,7 @@
 * 3 是否可以对数组进行越界访问,java不可以
 * 4 是否开启堆栈保护（不管i和arr的位置谁在前，谁在后，arr的地址都处于高位）：linux下gcc使用-fno-stack-protector参数时，可以关闭堆栈保护
 */
+
 void testVariableAllocating() {
 	int i = 0;
 	int arr[3];
@@ -18,34 +19,5 @@ void testVariableAllocating() {
 	}
 }
 
-template<class T>
-void Link<T>::insert(T v) {
-	LinkNode<T> * temp = new LinkNode<T>(v);
-	if (temp != NULL) {
-		if (tail != NULL) {
-			tail->next = temp;
-			tail = temp;
-		}
-		else {
-			head = tail = temp;
-		}
-		length++;
-	}
-}
 
-template<class T>
-LinkNode<T>* Link<T>::query(T v) {
-	LinkNode<T> * temp=head;
-	while (temp != NULL) {
-		if (temp->value == v) {
-			return temp;
-		}
-		temp = temp->next;
-	}
-	return NULL;
-}
 
-template<class T>
-void Link<T>::del(T v) {
-
-}
