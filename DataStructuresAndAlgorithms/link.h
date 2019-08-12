@@ -20,7 +20,6 @@ public:
 	}
 };
 
-
 // Single Link
 template<class T>
 class Link {
@@ -100,10 +99,22 @@ void Link<T>::del(T v) {
 	}
 }
 
-// Single Link Reverse
-// Detect circle in link
-// Merge two ordered link
-// Delete the n-th node in link
-// Get middle node of the link
+/* 链表代码练习题
+ * Leetcode: 206,141,21,19,876
+ * Single Link Reverse
+ * Detect circle in link
+ * Merge two ordered link
+ * Delete the n-th node in link
+ * Get middle node of the link
+ */
+
+/* 如何优雅的写出链表代码：
+ * 1 理解指针或引用的含义
+ * 2 警惕指针丢失和内存泄漏
+ * 3 利用哨兵简化实现难度
+ * 4 重点留意边界条件处理
+ * 5 举例画图，辅助思考
+ * 6 多写多练，没有捷径
+ */
 
 # endif
